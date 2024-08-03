@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator App</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="calculator-body">
+            <div class="top-container">
+                <div class="output-container">
+                    <div class="output">
+                        <p id="result" class="output-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="buttons">
+                    <button id="AC" class="gray button" onclick="clearInput()">AC</button>
+                    <button id="negate" class="gray button" onclick="toggleSign()">+/-</button>
+                    <button id="percent" class="gray button" onclick="convertToPercent()">%</button>
+                    <button id="divide" class="orange button" onclick="mathFunction('/')">/</button>
+                    <button id="7" class="black button" onclick="appendNumber('7')">7</button>
+                    <button id="8" class="black button" onclick="appendNumber('8')">8</button>
+                    <button id="9" class="black button" onclick="appendNumber('9')">9</button>
+                    <button id="multiply" class="orange button" onclick="mathFunction('*')">x</button>
+                    <button id="4" class="black button" onclick="appendNumber('4')">4</button>
+                    <button id="5" class="black button" onclick="appendNumber('5')">5</button>
+                    <button id="6" class="black button" onclick="appendNumber('6')">6</button>
+                    <button id="minus" class="orange button" onclick="mathFunction('-')">-</button>
+                    <button id="1" class="black button" onclick="appendNumber('1')">1</button>
+                    <button id="2" class="black button" onclick="appendNumber('2')">2</button>
+                    <button id="3" class="black button" onclick="appendNumber('3')">3</button>
+                    <button id="plus" class="orange button" onclick="mathFunction('+')">+</button>
+                    <button id="0" class="black wide button" onclick="appendNumber('0')">0</button>
+                    <button id="decimal" class="black button" onclick="appendDecimal()">.</button>
+                    <button id="equals" class="orange button" onclick="calculateResult()">=</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

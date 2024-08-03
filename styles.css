@@ -1,0 +1,241 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    display: flex;
+}
+
+.calculator-body {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 20px;
+    align-items: center;
+    border: 1px solid transparent;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8) inset, /* Inner white shine */
+                0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.top-container {
+    width: 100%;
+    padding: 2vw;
+}
+
+.output-container {
+    position: relative;
+    top: 0;
+    height: 40vh;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 2vw;
+    color: white;
+    text-align: right;
+}
+
+.output {
+    width: 100%;
+    font-size: 3vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 4vw;
+    top: 20%;
+    position: relative;
+}
+
+.output p {
+    margin-right: 2vw;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.input-container {
+    position: absolute;
+    bottom: 0;
+    height: 60vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: 30vw;
+    margin-left: 2vw;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 0;
+}
+
+.button {
+    height: 6vw;
+    width: 6vw;
+    border-radius: 50%;
+    background-color: rgb(61, 60, 60);
+    border: none;
+    margin: 5px;
+    color: white;
+    font-size: 2vw;
+    transition: background-color 0.5s ease;
+}
+
+.button:hover {
+    background-color: rgb(110, 109, 109);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(162, 160, 160);
+}
+
+.gray {
+    background-color: rgb(130, 129, 129);
+    color: black;
+    transition: background-color 0.5s ease;
+}
+
+.gray:hover {
+    cursor: pointer;
+    background-color: rgb(183, 183, 183);
+}
+
+.gray:active {
+    background-color: rgb(229, 225, 225);
+}
+
+.orange {
+    background-color: orange;
+    transition: background-color 0.5s ease;
+}
+
+.orange:hover {
+    background-color: rgb(243, 206, 137);
+    cursor: pointer;
+}
+
+.orange:active {
+    background-color: rgb(242, 220, 179);
+}
+
+.wide {
+    width: 13vw;
+    border-radius: 50%/100%;
+}
+
+/* Responsive styling for smaller screen widths */
+
+@media (min-width: 601px) and (max-width: 810px) {
+    .calculator-body {
+        height: 100vh;
+        width: 50vw;
+    }
+
+    .output {
+        top: 10%;
+        right: 5%;
+    }
+
+    .output p {
+        font-size: 50px;
+    }
+
+    .button {
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .input-container {
+        height: 50vh;
+        width: 100%;
+        margin-left: 20px;
+        margin-bottom: 45px;
+        margin-right: 20px;
+        text-align: center;
+    }
+    
+    .wide {
+        width: 150px;
+        border-radius: 50%/100%;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 600px) {
+    .calculator-body {
+        height: 80vh;
+        width: 80vw;
+        top: 5%;
+    }
+
+    .output p {
+        font-size: 35px;
+    }
+
+    .button {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .input-container {
+        height: 30vh;
+        width: 100%;
+        margin-left: 20px;
+        margin-bottom: 45px;
+        margin-right: 20px;
+        text-align: center;
+    }
+    
+    .wide {
+        width: 135px;
+        border-radius: 50%/100%;
+    }
+}
+
+@media (max-width: 349px) {
+    .calculator-body {
+        top: 15%;
+        width: 70vw;
+        height: 70vh;
+    }
+
+    .output p {
+        font-size: 25px;
+    }
+
+    .button {
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .input-container {
+        height: 30vh;
+        width: 100%;
+        margin-left: 10px;
+        margin-bottom: 35px;
+        margin-right: 15px;
+        text-align: center;
+    }
+
+    .wide {
+        width: 100px;
+        border-radius: 50%/100%;
+    }
+}
+
+/* Responsive designs for tablet aspsect ratios */
+
+@media (min-width: 765px) and (max-width: 1025px) and (orientation: landscape) and (max-aspect-ratio: 4/3),
+       (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 4/3) {
+    .calculator-body {
+            height: 70vh;
+            top: 15%;
+        }
+}
+
+  
+  
