@@ -54,7 +54,7 @@ function clearInput() {
 
 function appendDecimal() {
     if (!currentNumber.includes('.')) {
-        if (isLastElementOperator(inputArray)) {
+        if (isLastElementOperator(inputArray) && currentNumber == '') {
             currentNumber = '0.';
             outputText.textContent = '0.';
         } else if (outputText.textContent == '0') {
