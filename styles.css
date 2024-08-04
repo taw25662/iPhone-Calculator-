@@ -47,6 +47,7 @@ html, body {
 
 .output p {
     margin-right: 25px;
+    margin-left: 25px;
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis;
