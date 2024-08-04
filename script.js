@@ -54,8 +54,16 @@ function clearInput() {
 
 function appendDecimal() {
     if (!currentNumber.includes('.')) {
-        currentNumber += '.';
-        outputText.textContent += '.';
+        if (isLastElementOperator(inputArray)) {
+            currentNumber = '0.';
+            outputText.textContent = '0.';
+        } else if (outputText.textContent == '0') {
+            currentNumber = '0.';
+            outputText.textContent = '0.';
+        } else {
+            currentNumber += '.';
+            outputText.textContent = currentNumber;
+        }
     }
 }
 
