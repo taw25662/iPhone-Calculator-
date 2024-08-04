@@ -1,0 +1,26 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.calculator {
+    background-color: black;
+    position: fixed;
+    height: 90vh;
+    width: 50vw;
+}
+
+.output {
+    background-color: gray;
+    position: relative;
+    top: 0;
+    height: 20%;
+}
+
+.input {
+    background-color: red;
+    position: relative;
+    bottom: 0;
+    height: 80%;
+}
